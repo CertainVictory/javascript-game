@@ -9,6 +9,7 @@ let gameStart = prompt("Do you want to play?");
 
 if (gameStart == "yes") {
     let name = prompt("What is your name?");
+
         while (ourHp >=0) {
             ourHp=ourHp-dmg;
             console.log(`${name} has ${ourHp} health left!`);
@@ -17,13 +18,14 @@ if (gameStart == "yes") {
             if (grantsHp <=0) {
                 wins++;
                 grantsHp = 10;
+                console.log(`${name} wins this round!`)
             }
             if (ourHp <=0){
                 break;
                 console.log(`Game over, try again!`)
             }
             if (wins === 3) {
-                console.log(`${name} has defeated Grant The Almighty`)
+                console.log(`${name} has defeated Grant The Almighty!`)
                 break;
             }
     
